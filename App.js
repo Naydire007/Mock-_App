@@ -40,7 +40,7 @@ export default function App() {
 
     <View style={styles.container}>
       {/* Adding scroll view to enable scrolling when list gets longer than the page */}
-      <ScrollView
+       <ScrollView
         contentContainerStyle={{
           flexGrow:1
         }}
@@ -65,24 +65,19 @@ export default function App() {
               )
             })
           }
-          {/* <View> */}
-          
+          </View>
         </View>
-
-       
-          
-      </View>
         </ScrollView>
-      </View>
-      
+          
+ 
 
-      )/* Write a task
-      KeyboardAvoidingView which ensures the keyboard does not cover the items on screen */}
+      {/* Write a task */}
+      {/* KeyboardAvoidingView which ensures the keyboard does not cover the items on screen */}
       <KeyboardAvoidingView
       behavior = {Platform.OS === "ios" ? "padding" : "height"}
       style={styles.writeTaskWrapper}
       >
-
+        
         {/* onChangeText = everytime the text changes will grab the text and will set the task to be that text */}
         {/* We want to set the 'value' to be equal to that state */}
         <TextInput style={styles.input} placeholder={'Write a task'} value={task} onChangeText={text => setTask(text)}/>
@@ -164,6 +159,4 @@ addWrapper:{
 
 },
 addText:{},
-
-
 });
